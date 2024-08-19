@@ -24,7 +24,7 @@ FROM node:18
 WORKDIR /app
 
 # Copy the built Angular app to the working directory
-COPY --from=build-stage /app/dist/testing .
+COPY --from=build-stage /app/dist/testing/browser .
 
 # Install a simple Node.js server to serve the Angular app
 RUN npm install -g http-server
